@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Our Offers | Lipad Agila</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- import fontawesome icons -->
+    <link rel="stylesheet" href="./fontawesome/css/all.css" />
+  </head>
+  <body style="background: linear-gradient(90deg, #16222a 0%, #3a6073 100%)">
+    <!-- header -->
+    <header class="h-full relative pb-8">
+      <!-- navigation menu -->
+      <nav class="py-4 top-0 px-4 md:px-16 fixed w-full z-50" id="navMenu">
+        <div class="flex flex-wrap justify-between items-center">
+          <!-- header - logo -->
+          <div class="flex justify-center items-center">
+            <img
+              src="./logo-white.png"
+              alt=""
+              class="h-12 w-12 object-cover mr-2"
+              id="image-logo"
+            />
+            <h1
+              class="text-white uppercase font-bold tracking-widest text-lg"
+              id="brandname"
+            >
+              Lipad Agila
+            </h1>
+          </div>
+          <!-- header - links -->
+          <ul class="hidden md:flex">
+            <li class="block md:inline-flex">
+              <a
+                href="index.html"
+                class="nav-link text-white font-light hover:text-yellow-400 px-4 leading-loose tracking-wide"
+                >Explore</a
+              >
+            </li>
+            <li class="block md:inline-flex">
+              <a
+                href="#"
+                class="nav-link current font-light hover:text-yellow-400 px-4 leading-loose tracking-wide"
+                >Offers</a
+              >
+            </li>
+            <li class="block md:inline-flex">
+              <a
+                href="about.html"
+                class="nav-link font-light hover:text-yellow-400 text-white px-4 leading-loose tracking-wide"
+                >About Us</a
+              >
+            </li>
+          </ul>
+          <div class="flex justify-between items-center">
+            <a
+              href="login.html"
+              class="font-light px-3 md:px-6 py-2 border border-main-bluegreen bg-main-bluegreen text-white rounded-full leading-loose tracking-wide hover:bg-violet hover:border-bg-violet"
+              ><i class="fas fa-user"></i> Login</a
+            >
+            <!-- for mobile navigations -->
+            <button onclick="toggleNav()" class="md:hidden ml-4">
+              <i class="fas fa-bars fa-lg text-white" id="mobile-bar"></i>
+            </button>
+          </div>
+        </div>
+        <!-- mobile nav-->
+        <div class="mt-2 md:hidden">
+          <ul class="hidden text-center" id="mobile-Nav">
+            <li class="block">
+              <a
+                href="index.html"
+                class="nav-link text-white font-light hover:text-yellow-400 px-4 leading-loose tracking-wide"
+                >Explore</a
+              >
+            </li>
+            <li class="block">
+              <a
+                href="#"
+                class="nav-link font-light hover:text-yellow-400 current px-4 leading-loose tracking-wide"
+                >Offers</a
+              >
+            </li>
+            <li class="block">
+              <a
+                href="about.html"
+                class="nav-link font-light hover:text-yellow-400 text-white px-4 leading-loose tracking-wide"
+                >About Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <hr class="border-b border-gray-100 opacity-25 mb-5 pt-20" id="hero" />
+
+      <!-- hero section -->
+      <div>
+        <div class="flex lg:justify-between px-6 lg:px-20 reveal">
+          <div class="lg:w-3/5 lg:text-left mx-auto">
+            <h1
+              class="text-4xl leading-tight font-bold my-4 text-white text-center"
+            >
+              What do we Offer
+            </h1>
+            <!-- use 20 words -->
+            <p class="text-xl text-white text-center">
+              Budget-friendly. Locality based and no Hidden Fees. Fly in
+              allocated class!
+            </p>
+            <div class="mt-5 text-center">
+              <button
+                onclick="location.href='#offers'"
+                type="button"
+                class="px-2 py-2 lg:px-4 lg:py-4 pointer focus:outline-none focus:border-orange-500 border-2 rounded-lg lg:text-lg font-body font-light tracking-wide ml-4 border-main-bluegreen text-white bg-main-bluegreen leading-1 hover:bg-gold-100 hover:border-gold-100"
+              >
+                <i class="fas fa-ticket-alt"></i> See Offers
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- floating icon ?> popup contactus form -->
+    <div class="fixed right-5 bottom-5 z-50">
+      <button
+        onclick="openContactForm()"
+        class="px-4 py-4 bg-gold-100 rounded-full text-center text-white hover:bg-main-bluegreen"
+      >
+        <i class="fas fa-gem fa-2x"></i>
+      </button>
+    </div>
+    <!-- popup cntact form -->
+    <div
+      id="contactForm"
+      class="hidden fixed z-40 inset-x-5 top-15 md:top-1/4 md:inset-x-15 lg:left-1/2 lg:inset-y-15"
+    >
+      <div class="bg-white shadow-lg border-2 border-violet relative">
+        <button
+          onclick="closeContactForm()"
+          class="absolute right-0 top-0 mt-2 mr-4 cursor-pointer hover:text-gold-100"
+        >
+          <i class="fas fa-window-minimize fa-lg"></i>
+        </button>
+        <div class="py-8 px-2 mx-auto w-full">
+          <h2 class="text-center font-bold text-2xl">Contact Us</h2>
+          <form class="m-auto">
+            <div class="flex flex-col w-3/4 mx-auto my-2">
+              <label for="">Full Name: </label>
+              <input
+                class="rounded-lg border border-gray-400 px-2 py-2 focus:outline-none focus:border-gold-100"
+                type="text"
+                name=""
+                placeholder="Enter your complete name"
+              />
+            </div>
+            <div class="flex flex-col w-3/4 mx-auto my-2">
+              <label for="">Email Address: </label>
+              <input
+                class="rounded-lg border border-gray-400 px-2 py-2 focus:outline-none focus:border-gold-100"
+                type="email"
+                name=""
+                placeholder="Enter your email address"
+              />
+            </div>
+            <div class="flex flex-col w-3/4 mx-auto my-2">
+              <label for="">Phone Number: </label>
+              <input
+                class="rounded-lg border border-gray-400 px-2 py-2 focus:outline-none focus:border-gold-100"
+                type="text"
+                name=""
+                placeholder="Enter your phone number"
+              />
+            </div>
+            <div class="flex flex-col w-3/4 mx-auto my-2">
+              <label for="">Message: </label>
+              <textarea
+                class="rounded-lg h-24 border border-gray-400 px-2 py-2 focus:outline-none focus:border-gold-100"
+                placeholder="Enter your message"
+              ></textarea>
+            </div>
+            <div class="mx-auto w-3/4 text-center mt-4">
+              <button
+                type="submit"
+                class="bg-violet text-white px-5 py-3 rounded-full hover:bg-main-bluegreen mx-auto flex items-center"
+              >
+                <i class="far fa-envelope fa-lg mr-2"></i> Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="offers">
+      <div class="bg-white py-8">
+        <div
+          class="w-5/6 flex flex-wrap flex-col lg:flex-row lg:justify-between mx-auto items-center reveal"
+        >
+          <div class="relative h-medx w-3/4 lg:h-max lg:w-2/5">
+            <img
+              src="./offers.png"
+              alt=""
+              class="absolute object-cover lg:object-left h-full w-full"
+            />
+          </div>
+          <div class="lg:w-1/2 mx-auto text-center mt-4">
+            <h2 class="font-black text-3xl">
+              <span class="text-gold-400 font-alt font-black tracking-wide"
+                >Flight Class</span
+              >
+              Prices
+            </h2>
+            <p class="text-lg px-6">
+              Here the main packages we offer by Passenger seat class with their
+              corresponding prices
+            </p>
+            <div class="flex flex-wrap justify-around">
+              <div class="w-5/12 shadow-lg py-6 my-4 bg-gray-100">
+                <i class="text-gold-100 far fa-smile fa-2x"></i>
+                <p class="text-xl py-1">Economy</p>
+                <h4 class="text-4xl font-black" style="color: #756bed">$100</h4>
+                <button
+                  class="px-4 py-2 text-lg bg-main-bluegreen hover:bg-gold-100 text-white"
+                >
+                  <i class="fas fa-bookmark"></i> Book Now
+                </button>
+              </div>
+              <div class="w-5/12 shadow-lg py-6 my-4 bg-gray-100">
+                <i class="text-gold-100 fas fa-snowflake fa-2x"></i>
+                <p class="text-xl py-1">Premium Economy</p>
+                <h4 class="text-4xl font-black" style="color: #756bed">$100</h4>
+                <button
+                  class="px-4 py-2 text-lg bg-main-bluegreen hover:bg-gold-100 text-white"
+                >
+                  <i class="fas fa-bookmark"></i> Book Now
+                </button>
+              </div>
+              <div class="w-5/12 shadow-lg py-6 my-4 bg-gray-100">
+                <i class="text-gold-100 fas fa-briefcase fa-2x"></i>
+                <p class="text-xl py-1">Business Class</p>
+                <h4 class="text-4xl font-black" style="color: #756bed">$100</h4>
+                <button
+                  class="px-4 py-2 text-lg bg-main-bluegreen hover:bg-gold-100 text-white"
+                >
+                  <i class="fas fa-bookmark"></i> Book Now
+                </button>
+              </div>
+              <div class="w-5/12 shadow-lg py-6 my-4 bg-gray-100">
+                <i class="text-gold-100 fas fa-star fa-2x"></i>
+                <p class="text-xl py-1">First Class</p>
+                <h4 class="text-4xl font-black" style="color: #756bed">$100</h4>
+                <button
+                  class="px-4 py-2 text-lg bg-main-bluegreen hover:bg-gold-100 text-white"
+                >
+                  <i class="fas fa-bookmark"></i> Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-5/6 mx-auto text-center mt-8 pb-8 reveal">
+          <h2 class="font-black text-3xl">
+            <i class="fas fa-running"></i> Rush Hour Packages
+          </h2>
+          <div class="w-full mb-4">
+            <div
+              class="h-1 mx-auto w-64 opacity-25 my-0 py-0 rounded-t"
+              style="
+                background: linear-gradient(90deg, #16222a 0%, #3a6073 100%);
+              "
+            ></div>
+          </div>
+          <div
+            class="flex flex-wrap flex-col lg:flex-row lg:justify-center mt-4"
+          >
+            <div
+              class="w-3/4 mx-auto mb-8 lg:mb-0 lg:w-1/4 mx-2 shadow-xl border-2 border-gray-400"
+            >
+              <h4 class="text-2xl py-3 bg-gray-300">
+                <span class="uppercase font-alt font-bold text-green-500"
+                  >Common</span
+                >
+                15 Hours
+              </h4>
+              <h3 class="text-4xl py-4 bg-gray-200 font-black tracking-wide">
+                $ 49.99
+              </h3>
+              <ul class="bg-gray-100">
+                <li class="py-2 text-lg">
+                  <span
+                    class="font-normal bg-main-bluegreen px-2 py-1 rounded-full text-base text-white"
+                    >UNLIMTED</span
+                  >
+                  Flights
+                </li>
+                <li class="py-2 text-lg text-gold-100">
+                  needed within 5 hours
+                </li>
+                <li class="py-2 text-lg">valid up to 3 weeks</li>
+                <li class="py-2 text-lg">
+                  <span
+                    class="font-normal bg-main-bluegreen px-2 py-1 rounded-full text-base text-white"
+                    >FREE</span
+                  >
+                  Corrections
+                </li>
+                <li class="py-2 text-lg">
+                  <span
+                    class="font-normal bg-main-bluegreen px-2 py-1 rounded-full text-base text-white"
+                    >FREE</span
+                  >
+                  Cancellation
+                </li>
+                <li class="py-2 text-lg">
+                  <span
+                    class="font-normal bg-main-bluegreen px-2 py-1 rounded-full text-base text-white"
+                    >Economy</span
+                  >
+                  Package
+                </li>
+                <li class="py-2 text-lg text-green-500">
+                  24/7 Customer Support
+                </li>
+              </ul>
+              <div class="bg-gray-400">
+                <button
+                  class="px-4 py-3 text-white my-2 rounded-full bg-violet hover:bg-gold-100"
+                >
+                  <i class="fas fa-bookmark"></i> Book Now
+                </button>
+              </div>
+            </div>
+            <div
+              class="w-3/4 mx-auto mb-8 lg:mb-0 lg:w-1/4 mx-2 shadow-xl border-2 border-gray-400"
+            >
+              <h4 class="text-2xl py-3 bg-gray-300">
+                <span class="uppercase font-alt font-bold text-orange-500"
+                  >Rush</span
+                >
+                8 Hours
+              </h4>
+              <h3 class="text-4xl py-4 bg-gray-200 font-black tracking-wide">
+                $ 49.99
+              </h3>
+              <ul class="bg-gray-100">
+                <li class="py-2 text-lg">
+                  <span
+                    class="font-normal bg-main-bluegreen px-2 py-1 rounded-full text-base text-white"
+                    >UNLIMTED</span
+                  >
+                  Flights
+                </li>
+                <li class="py-2 text-lg text-gold-100">
+                  needed within 5 hours
+                </li>
+                <li class="py-2 text-lg">valid up to 3 weeks</li>
+                <li class="py-2 text-lg">
+                  <span
+                    class="font-normal bg-main-bluegreen px-2 py-1 rounded-full text-base text-white"
+                    >FREE</span
+                  >
+                  Corrections
+                </li>
+                <li class="py-2 text-lg">
+                  <span
+                    class="font-normal bg-main-bluegreen px-2 py-1 rounded-full text-base text-white"
+                    >FREE</span
+                  >
+                  Cancellation
+                </li>
+                <li class="py-2 text-lg">
+                  <span
+                    class="font-normal bg-main-bluegreen px-2 py-1 rounded-full text-base text-white"
+                    >Economy</span
+                  >
+                  Package
+                </li>
+                <li class="py-2 text-lg text-green-500">
+                  24/7 Customer Support
+                </li>
+              </ul>
+              <div class="bg-gray-400">
+                <button
+                  class="px-4 py-3 text-white my-2 rounded-full bg-violet hover:bg-gold-100"
+                >
+                  <i class="fas fa-bookmark"></i> Book Now
+                </button>
+              </div>
+            </div>
+            <div
+              class="w-3/4 mx-auto mb-8 lg:mb-0 lg:w-1/4 mx-2 shadow-xl border-2 border-gray-400"
+            >
+              <h4 class="text-2xl py-3 bg-gray-300">
+                <span class="uppercase font-alt font-bold text-red-500"
+                  >Critical</span
+                >
+                3 Hours
+              </h4>
+              <h3 class="text-4xl py-4 bg-gray-200 font-black tracking-wide">
+                $ 49.99
+              </h3>
+              <ul class="bg-gray-100">
+                <li class="py-2 text-lg">
+                  <span
+                    class="font-normal bg-main-bluegreen px-2 py-1 rounded-full text-base text-white"
+                    >UNLIMTED</span
+                  >
+                  Flights
+                </li>
+                <li class="py-2 text-lg text-gold-100">
+                  needed within 5 hours
+                </li>
+                <li class="py-2 text-lg">valid up to 3 weeks</li>
+                <li class="py-2 text-lg">
+                  <span
+                    class="font-normal bg-main-bluegreen px-2 py-1 rounded-full text-base text-white"
+                    >FREE</span
+                  >
+                  Corrections
+                </li>
+                <li class="py-2 text-lg">
+                  <span
+                    class="font-normal bg-main-bluegreen px-2 py-1 rounded-full text-base text-white"
+                    >FREE</span
+                  >
+                  Cancellation
+                </li>
+                <li class="py-2 text-lg">
+                  <span
+                    class="font-normal bg-main-bluegreen px-2 py-1 rounded-full text-base text-white"
+                    >Economy</span
+                  >
+                  Package
+                </li>
+                <li class="py-2 text-lg text-green-500">
+                  24/7 Customer Support
+                </li>
+              </ul>
+              <div class="bg-gray-400">
+                <button
+                  class="px-4 py-3 text-white my-2 rounded-full bg-violet hover:bg-gold-100"
+                >
+                  <i class="fas fa-bookmark"></i> Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="reveal"
+        style="
+          background: url(./images/banner2.jpg) rgba(0, 0, 0, 0.4);
+          background-blend-mode: multiply;
+          background-size: cover;
+        "
+      >
+        <div class="w-3/4 mx-auto text-center py-12">
+          <h2 class="font-black text-3xl text-white tracking-wide">
+            <i class="fas fa-globe-asia"></i> Travel Packages
+          </h2>
+          <div class="w-full mb-4">
+            <div
+              class="h-1 mx-auto w-64 opacity-25 my-0 py-0 rounded-t"
+              style="
+                background: linear-gradient(90deg, #57b894 0%, #fed701 100%);
+              "
+            ></div>
+          </div>
+          <div class="flex flex-col lg:flex-row mx-auto lg:justify-around mt-8">
+            <div class="w-3/4 lg:w-2/5 mx-auto mb-8 lg:mb-0">
+              <div class="relative h-medx shadow">
+                <img
+                  src="./images/dest4.jpg"
+                  alt=""
+                  class="absolute h-full w-full object-cover"
+                />
+              </div>
+              <div
+                class="bg-white text-left pl-4 pb-4 -mt-12 rounded-lg shadow-lg relative mx-8"
+              >
+                <h5 class="pt-4 font-bold">
+                  <span
+                    class="bg-violet mr-1 text-sm text-white px-2 py-1 rounded-full"
+                    >new</span
+                  >
+                  Singapore Travel Package
+                </h5>
+                <h3 class="">
+                  <span
+                    class="font-bold text-2xl tracking-wide leading-loose font-alt text-gold-400"
+                    >$ 45.99</span
+                  >
+                  / person
+                </h3>
+                <p>
+                  <span class="text-lg underline">One-way Trip</span> |
+                  <span class="px-2 py-1 bg-gold-100 text-white rounded-full"
+                    >Premium Economy</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="w-3/4 lg:w-2/5 mx-auto mb-8 lg:mb-0">
+              <div class="relative h-medx shadow">
+                <img
+                  src="./images/dest3.jpg"
+                  alt=""
+                  class="absolute h-full w-full object-cover"
+                />
+              </div>
+              <div
+                class="bg-white text-left pl-4 pb-4 -mt-12 rounded-lg shadow-lg relative mx-8"
+              >
+                <h5 class="pt-4 font-bold">
+                  <span
+                    class="bg-violet mr-1 text-sm text-white px-2 py-1 rounded-full"
+                    >new</span
+                  >
+                  South East Asia Travel Package
+                </h5>
+                <h3 class="">
+                  <span
+                    class="font-bold text-2xl tracking-wide leading-loose font-alt text-gold-400"
+                    >$ 64.99</span
+                  >
+                  / person
+                </h3>
+                <p>
+                  <span class="text-lg underline">Multi-city Trip</span> |
+                  <span
+                    class="px-2 py-1 bg-main-bluegreen text-white rounded-full"
+                    >First Class</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-gray-100 reveal">
+      <div
+        class="py-6 lg:py-12 w-4/5 mx-auto flex flex-col lg:flex-row lg:justify-between"
+      >
+        <h2
+          class="text-3xl font-extrabold tracking-tight text-main-bluegreen leading-9 font-sans"
+        >
+          Ready to reserve? <br /><span
+            class="text-orange-500 font-extrabold font-sans"
+            >Start by booking your first flight.</span
+          >
+        </h2>
+        <div class="mt-4 lg:mt-0">
+          <div class="inline-flex rounded-md shadow">
+            <a
+              href="#"
+              class="px-6 py-4 inline-flex items-center text-base leading-6 font-medium focus:outline-none focus:shadow-outline transition duration-150 ease-in-out border border-transparent rounded-lg bg-orange-500 text-white hover:bg-orange-600 shadow-lg"
+            >
+              <i class="fas fa-bookmark mr-1"></i> Book a Flight</a
+            >
+          </div>
+          <div class="ml-3 inline-flex rounded-md shadow">
+            <a
+              href="#"
+              class="px-6 py-4 inline-flex items-center text-base leading-6 font-medium focus:outline-none focus:shadow-outline transition duration-150 ease-in-out border border-transparent rounded-lg text-orange-500 hover:text-orange-600 shadow-lg"
+            >
+              <i class="fas fa-user mr-1"></i> Login Account</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="w-full text-white">
+      <div class="flex justify-between flex-wrap lg:px-16 px-8 py-8 reveal">
+        <!-- footer > about -->
+        <div class="md:w-4/12 lg:w-2/5 mb-4 w-full text-center md:text-left">
+          <h4 class="uppercase tracking-wide text-gold-400 font-bold">About</h4>
+          <p class="mt-3 leading-tight">
+            Locality, Exclusivity, and Excellence in aviation combed in
+            accordance to your budget. That is what we are. That is what we wil
+            be. We are Lipad Agila
+          </p>
+        </div>
+        <!-- footer > social links -->
+        <div class="md:w-4/12 lg:w-1/5 mb-4 w-full text-center md:text-left">
+          <h4 class="uppercase tracking-wide text-gold-400 font-bold">
+            Keep Connected
+          </h4>
+          <ul class="mt-3">
+            <li class="mt-1">
+              <a href="#" class="hover:text-main-bluegreen"
+                ><i class="text-main-bluegreen fab fa-facebook"></i> Like Us on
+                Facebook</a
+              >
+            </li>
+            <li class="mt-1">
+              <a href="#" class="hover:text-main-bluegreen"
+                ><i class="text-main-bluegreen fab fa-twitter"></i> Follow Us on
+                Twitter</a
+              >
+            </li>
+            <li class="mt-1">
+              <a href="#" class="hover:text-main-bluegreen"
+                ><i class="text-main-bluegreen fab fa-google-plus"></i> Add Us
+                on Google Plus</a
+              >
+            </li>
+            <li class="mt-1">
+              <a href="#" class="hover:text-main-bluegreen"
+                ><i class="text-main-bluegreen fab fa-pinterest"></i> Follow Us
+                on Pinterest</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- footer > contact information -->
+        <div class="md:w-3/12 lg:w-1/5 mb-4 w-full text-center md:text-left">
+          <h4 class="uppercase tracking-wide text-gold-400 font-bold">
+            Contact Information
+          </h4>
+          <ul class="mt-3">
+            <li class="mt-1">
+              <i class="text-main-bluegreen fas fa-location-arrow"></i> Lipad
+              Agila Inc., <br />74 Rogers Street<br />Cincinnati, OH 45202
+            </li>
+            <li class="mt-1">
+              <i class="text-main-bluegreen fas fa-phone"></i> + 12345678901
+            </li>
+            <li class="mt-1">
+              <i class="text-main-bluegreen fas fa-envelope"></i>
+              contact@lipad-agila.com
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- footer > copyrights -->
+      <div
+        class="flex md:flex-row justify-between flex-wrap text-center flex-col-reverse bg-white text-black px-4 lg:px-16 py-4 reveal"
+      >
+        <p>Copyrights LIPAD AGILA Inc. | All Rights Reserved &copy; 2020</p>
+        <ul class="flex flex-col md:flex-row items-center mb-4 md:mb-0">
+          <li class="inline-flex">
+            <a href="#" class="hover:text-gold-300 px-3 font-normal">FAQs</a>
+          </li>
+          <li class="inline-flex">
+            <a href="#" class="hover:text-gold-300 px-3 font-normal"
+              >Privacy Policy</a
+            >
+          </li>
+          <li class="inline-flex">
+            <a href="#" class="hover:text-gold-300 px-3 font-normal"
+              >Terms and Conditions</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- scrollreveal animation -->
+    <script src="./js/scrollreveal.js"></script>
+    <script type="text/javascript">
+      ScrollReveal({ reset: true });
+      ScrollReveal().reveal(".reveal", { delay: 300 });
+    </script>
+
+    <!-- fixed navigation -->
+    <script>
+      var scrollpos = window.scrollY;
+      var navMenu = document.getElementById("navMenu");
+      var menuLink = document.querySelectorAll(".nav-link");
+      var brandname = document.getElementById("brandname");
+      var mBar = document.getElementById("mobile-bar");
+      var logo = document.getElementById("image-logo");
+
+      document.addEventListener("scroll", function () {
+        /*Apply classes for slide in bar*/
+        scrollpos = window.scrollY;
+
+        if (scrollpos > 10) {
+          navMenu.classList.add("bg-white");
+          navMenu.classList.add("shadow");
+          for (var i = 0; i < menuLink.length; i++) {
+            if (menuLink[i].classList.contains("current")) {
+              menuLink[i].classList.add("text-gold-100");
+              menuLink[i].classList.add("hover:text-gold-100");
+            } else {
+              menuLink[i].classList.remove("text-white");
+              menuLink[i].classList.add("text-black");
+              menuLink[i].classList.add("hover:text-gold-100");
+            }
+          }
+          brandname.classList.remove("text-white");
+          brandname.classList.add("text-black");
+          mBar.classList.remove("text-white");
+          mBar.classList.add("text-black");
+          logo.src = "./logo.png";
+        } else {
+          navMenu.classList.remove("bg-white");
+          navMenu.classList.remove("shadow");
+          for (var i = 0; i < menuLink.length; i++) {
+            if (menuLink[i].classList.contains("current")) {
+              menuLink[i].classList.remove("text-gold-100");
+            } else {
+              menuLink[i].classList.add("text-white");
+              menuLink[i].classList.remove("text-black");
+              menuLink[i].classList.remove("hover:text-gold-100");
+            }
+          }
+          brandname.classList.add("text-white");
+          brandname.classList.remove("text-black");
+          mBar.classList.add("text-white");
+          mBar.classList.remove("text-black");
+          logo.src = "./logo-white.png";
+        }
+      });
+    </script>
+
+    <!-- toggle  mobile navigation and contact-form -->
+    <script type="text/javascript">
+      var mNAV = document.getElementById("mobile-Nav");
+      var hR = document.getElementById("hero");
+      function toggleNav() {
+        if (mNAV.style.display === "block") {
+          mNAV.style.display = "none";
+          hR.classList.add("pt-20");
+          hR.style.paddingTop = "5rem";
+        } else {
+          mNAV.style.display = "block";
+          hR.classList.remove("pt-20");
+          hR.style.paddingTop = "12rem";
+        }
+      }
+
+      var cF = document.getElementById("contactForm");
+      function openContactForm() {
+        cF.style.display = "block";
+      }
+      function closeContactForm() {
+        cF.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

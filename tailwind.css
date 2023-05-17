@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Chivo:300,400|Poppins:300,400,700,900&display=swap"); /*use google font*/
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+* {
+  @apply font-light;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+header a {
+  @apply font-alt;
+}
+.current {
+  @apply text-yellow-400;
+}

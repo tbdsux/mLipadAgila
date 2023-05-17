@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login Account | Lipad Agila</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- import fontawesome icons -->
+    <link rel="stylesheet" href="./fontawesome/css/all.css" />
+
+    <style type="text/css">
+      .input-div {
+        position: relative;
+        display: grid;
+        grid-template-columns: 7% 93%;
+        margin: 25px 0;
+        padding: 5px 0;
+        border-bottom: 0.25em solid #d9d9d9;
+      }
+
+      .login-content .input-div.one {
+        margin-top: 0;
+      }
+
+      .i {
+        color: #d9d9d9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .i i {
+        transition: 0.3s;
+      }
+
+      .input-div > div {
+        position: relative;
+        height: 45px;
+      }
+
+      .input-div > div > h5 {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 18px;
+        transition: 0.3s;
+      }
+
+      .input-div:before,
+      .input-div:after {
+        content: "";
+        position: absolute;
+        bottom: -0.25em;
+        width: 0%;
+        height: 0.25em;
+        background-color: #38d39f;
+        transition: 0.4s;
+      }
+
+      .input-div:before {
+        right: 50%;
+      }
+
+      .input-div:after {
+        left: 50%;
+      }
+
+      .input-div.focus:before,
+      .input-div.focus:after {
+        width: 50%;
+      }
+
+      .input-div.focus > div > h5 {
+        top: -5px;
+        font-size: 15px;
+      }
+
+      .input-div.focus > .i > i {
+        color: #38d39f;
+      }
+
+      .input-div > div > input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        background: none;
+        padding: 0.5rem 0.7rem;
+        font-size: 1.2rem;
+      }
+
+      .input-div.pass {
+        margin-bottom: 4px;
+      }
+    </style>
+  </head>
+  <body style="background: linear-gradient(90deg, #16222a 0%, #3a6073 100%)">
+    <!-- header -->
+    <header class="w-full relative pb-8">
+      <!-- navigation menu -->
+      <!-- navigation menu -->
+      <nav class="py-4 top-0 px-4 md:px-16 fixed w-full z-50" id="navMenu">
+        <div class="flex flex-wrap justify-between items-center">
+          <!-- header - logo -->
+          <div class="flex justify-center items-center">
+            <img
+              src="./logo-white.png"
+              alt=""
+              class="h-12 w-12 object-cover mr-2"
+              id="image-logo"
+            />
+            <h1
+              class="text-white uppercase font-bold tracking-widest text-lg"
+              id="brandname"
+            >
+              Lipad Agila
+            </h1>
+          </div>
+          <!-- header - links -->
+          <ul class="">
+            <li class="block md:inline-flex">
+              <a
+                href="index.html"
+                class="nav-link text-white font-light hover:text-yellow-400 px-4 leading-loose tracking-wide"
+                >Explore</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- hero section -->
+      <div class="py-20 border-b-2 border-white">
+        <div
+          class="flex flex-col-reverse md:flex-row md:justify-between items-center px-6 lg:px-20 reveal"
+        >
+          <div
+            class="relative w-64 h-64 md:w-2/5 md:h-mdx lg:h-max mx-auto mt-4"
+          >
+            <img
+              src="./login.png"
+              alt=""
+              class="absolute object-cover object-bottom w-full h-full rounded-lg"
+            />
+          </div>
+          <div class="md:w-2/5 lg:text-left mx-auto">
+            <h1
+              class="text-4xl leading-tight font-bold my-4 text-white text-center"
+            >
+              <span class="font-alt font-black uppercase text-violet"
+                >Login</span
+              >
+              to Your Account
+            </h1>
+            <!-- use 20 words -->
+            <p class="text-xl text-white text-center">
+              Be acquianted and updated to our newest and cheapest flights.
+              Lipad Agila Awaits!
+            </p>
+
+            <div class="mt-4">
+              <form>
+                <div class="input-div one">
+                  <div class="i">
+                    <i class="fas fa-user"></i>
+                  </div>
+                  <div class="div">
+                    <h5 class="font-body text-gray-400 tracking-wide">
+                      Username
+                    </h5>
+                    <input
+                      type="text"
+                      class="input font-bold font-alt tracking-wide text-gray-300 focus:text-main-bluegreen text-white"
+                    />
+                  </div>
+                </div>
+                <div class="input-div pass">
+                  <div class="i">
+                    <i class="fas fa-lock"></i>
+                  </div>
+                  <div class="div">
+                    <h5 class="font-body text-gray-400 tracking-wide">
+                      Password
+                    </h5>
+                    <input
+                      type="password"
+                      class="input font-bold font-alt tracking-wide text-gray-300 focus:text-main-bluegreen text-white"
+                    />
+                  </div>
+                </div>
+                <div class="text-center mt-4 flex flex-col">
+                  <a
+                    href="#"
+                    class="text-gray-300 font-body font-normal hover:text-main-bluegreen"
+                    >Forgot Password?</a
+                  >
+                  <button
+                    type="submit"
+                    class="mt-4 px-8 py-3 bg-main-bluegreen mx-12 rounded-full text-gray-200 font-alt font-bold tracking-wide hover:bg-gold-100"
+                  >
+                    <i class="fas fa-sign-in-alt mr-1"></i>Sign In
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- floating icon ?> popup contactus form -->
+    <div class="fixed right-5 bottom-5 z-50">
+      <button
+        onclick="openContactForm()"
+        class="px-4 py-4 bg-gold-100 rounded-full text-center text-white hover:bg-main-bluegreen"
+      >
+        <i class="fas fa-gem fa-2x"></i>
+      </button>
+    </div>
+    <!-- popup cntact form -->
+    <div
+      id="contactForm"
+      class="hidden fixed z-40 inset-x-5 top-15 md:top-1/4 md:inset-x-15 lg:left-1/2 lg:inset-y-15"
+    >
+      <div class="bg-white shadow-lg border-2 border-violet relative">
+        <button
+          onclick="closeContactForm()"
+          class="absolute right-0 top-0 mt-2 mr-4 cursor-pointer hover:text-gold-100"
+        >
+          <i class="fas fa-window-minimize fa-lg"></i>
+        </button>
+        <div class="py-8 px-2 mx-auto w-full">
+          <h2 class="text-center font-bold text-2xl">Contact Us</h2>
+          <form class="m-auto">
+            <div class="flex flex-col w-3/4 mx-auto my-2">
+              <label for="">Full Name: </label>
+              <input
+                class="rounded-lg border border-gray-400 px-2 py-2 focus:outline-none focus:border-gold-100"
+                type="text"
+                name=""
+                placeholder="Enter your complete name"
+              />
+            </div>
+            <div class="flex flex-col w-3/4 mx-auto my-2">
+              <label for="">Email Address: </label>
+              <input
+                class="rounded-lg border border-gray-400 px-2 py-2 focus:outline-none focus:border-gold-100"
+                type="email"
+                name=""
+                placeholder="Enter your email address"
+              />
+            </div>
+            <div class="flex flex-col w-3/4 mx-auto my-2">
+              <label for="">Phone Number: </label>
+              <input
+                class="rounded-lg border border-gray-400 px-2 py-2 focus:outline-none focus:border-gold-100"
+                type="text"
+                name=""
+                placeholder="Enter your phone number"
+              />
+            </div>
+            <div class="flex flex-col w-3/4 mx-auto my-2">
+              <label for="">Message: </label>
+              <textarea
+                class="rounded-lg h-24 border border-gray-400 px-2 py-2 focus:outline-none focus:border-gold-100"
+                placeholder="Enter your message"
+              ></textarea>
+            </div>
+            <div class="mx-auto w-3/4 text-center mt-4">
+              <button
+                type="submit"
+                class="bg-violet text-white px-5 py-3 rounded-full hover:bg-main-bluegreen mx-auto flex items-center"
+              >
+                <i class="far fa-envelope fa-lg mr-2"></i> Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="w-full text-white">
+      <div class="flex justify-between flex-wrap lg:px-16 px-8 py-8 reveal">
+        <!-- footer > about -->
+        <div class="md:w-4/12 lg:w-2/5 mb-4 w-full text-center md:text-left">
+          <h4 class="uppercase tracking-wide text-gold-400 font-bold">About</h4>
+          <p class="mt-3 leading-tight">
+            Locality, Exclusivity, and Excellence in aviation combed in
+            accordance to your budget. That is what we are. That is what we wil
+            be. We are Lipad Agila
+          </p>
+        </div>
+        <!-- footer > social links -->
+        <div class="md:w-4/12 lg:w-1/5 mb-4 w-full text-center md:text-left">
+          <h4 class="uppercase tracking-wide text-gold-400 font-bold">
+            Keep Connected
+          </h4>
+          <ul class="mt-3">
+            <li class="mt-1">
+              <a href="#" class="hover:text-main-bluegreen"
+                ><i class="text-main-bluegreen fab fa-facebook"></i> Like Us on
+                Facebook</a
+              >
+            </li>
+            <li class="mt-1">
+              <a href="#" class="hover:text-main-bluegreen"
+                ><i class="text-main-bluegreen fab fa-twitter"></i> Follow Us on
+                Twitter</a
+              >
+            </li>
+            <li class="mt-1">
+              <a href="#" class="hover:text-main-bluegreen"
+                ><i class="text-main-bluegreen fab fa-google-plus"></i> Add Us
+                on Google Plus</a
+              >
+            </li>
+            <li class="mt-1">
+              <a href="#" class="hover:text-main-bluegreen"
+                ><i class="text-main-bluegreen fab fa-pinterest"></i> Follow Us
+                on Pinterest</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- footer > contact information -->
+        <div class="md:w-3/12 lg:w-1/5 mb-4 w-full text-center md:text-left">
+          <h4 class="uppercase tracking-wide text-gold-400 font-bold">
+            Contact Information
+          </h4>
+          <ul class="mt-3">
+            <li class="mt-1">
+              <i class="text-main-bluegreen fas fa-location-arrow"></i> Lipad
+              Agila Inc., <br />74 Rogers Street<br />Cincinnati, OH 45202
+            </li>
+            <li class="mt-1">
+              <i class="text-main-bluegreen fas fa-phone"></i> + 12345678901
+            </li>
+            <li class="mt-1">
+              <i class="text-main-bluegreen fas fa-envelope"></i>
+              contact@lipad-agila.com
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- footer > copyrights -->
+      <div
+        class="flex md:flex-row justify-between flex-wrap text-center flex-col-reverse bg-white text-black px-4 lg:px-16 py-4 reveal"
+      >
+        <p>Copyrights LIPAD AGILA Inc. | All Rights Reserved &copy; 2020</p>
+        <ul class="flex flex-col md:flex-row items-center mb-4 md:mb-0">
+          <li class="inline-flex">
+            <a href="#" class="hover:text-gold-300 px-3 font-normal">FAQs</a>
+          </li>
+          <li class="inline-flex">
+            <a href="#" class="hover:text-gold-300 px-3 font-normal"
+              >Privacy Policy</a
+            >
+          </li>
+          <li class="inline-flex">
+            <a href="#" class="hover:text-gold-300 px-3 font-normal"
+              >Terms and Conditions</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- scrollreveal animation -->
+    <script src="./js/scrollreveal.js"></script>
+    <script type="text/javascript">
+      ScrollReveal({ reset: true });
+      ScrollReveal().reveal(".reveal", { delay: 300 });
+    </script>
+
+    <!-- fixed navigation -->
+    <script>
+      var scrollpos = window.scrollY;
+      var navMenu = document.getElementById("navMenu");
+      var menuLink = document.querySelectorAll(".nav-link");
+      var brandname = document.getElementById("brandname");
+      var mBar = document.getElementById("mobile-bar");
+      var logo = document.getElementById("image-logo");
+
+      document.addEventListener("scroll", function () {
+        /*Apply classes for slide in bar*/
+        scrollpos = window.scrollY;
+
+        if (scrollpos > 10) {
+          navMenu.classList.add("bg-white");
+          navMenu.classList.add("shadow");
+          brandname.classList.remove("text-white");
+          brandname.classList.add("text-black");
+          logo.src = "./logo.png";
+          menuLink.classList.add("text-black");
+          menuLink.classList.add("hover:text-gold-100");
+        } else {
+          navMenu.classList.remove("bg-white");
+          navMenu.classList.remove("shadow");
+          brandname.classList.add("text-white");
+          brandname.classList.remove("text-black");
+          logo.src = "./logo-white.png";
+          menuLink.classList.add("text-white");
+          menuLink.classList.remove("text-black");
+          menuLink.classList.remove("hover:text-gold-100");
+        }
+      });
+    </script>
+
+    <!-- animation for user input -->
+    <script type="text/javascript">
+      const inputs = document.querySelectorAll(".input");
+
+      function addcl() {
+        let parent = this.parentNode.parentNode;
+        parent.classList.add("focus");
+      }
+
+      function remcl() {
+        let parent = this.parentNode.parentNode;
+        if (this.value == "") {
+          parent.classList.remove("focus");
+        }
+      }
+
+      inputs.forEach((input) => {
+        input.addEventListener("focus", addcl);
+        input.addEventListener("blur", remcl);
+      });
+    </script>
+
+    <!-- toggle contact-form -->
+    <script type="text/javascript">
+      var cF = document.getElementById("contactForm");
+      function openContactForm() {
+        cF.style.display = "block";
+      }
+      function closeContactForm() {
+        cF.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
